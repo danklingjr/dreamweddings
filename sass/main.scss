@@ -6,10 +6,180 @@
 /*!////////////////////////////////////////////////
 // MODULES
 /////////////////////////////////////////////////*/
-.test{
-	min-height: 100px;
-	background-color: gray;
+html,
+body{
+	height: 100%;
 }
+header[role=banner]{
+	height: 100%;
+	position: relative;
+}
+.masthead{
+	height: 100%;
+	width: 100%;
+	background:{
+		image: url(../img/cover1.jpg);
+		size: cover;
+		position: center center;
+	}
+	text-align: center;
+}
+.logo{
+	max-width: 100%;
+}
+nav[role=navigation]{
+	background:{
+		color: rgba(255,255,255,0.9);
+	}
+	position: relative;
+	bottom: 0;
+	margin-top: -52px;
+	padding: 15px 0;
+	text-align: center;
+	text-transform: uppercase;
+	span{
+		padding: 0 35px;
+		a{
+			font-family: $dreamFont;
+			font-size: em(18px,$font-size);
+			font-weight: 300;
+			color: $fontColor;
+			text-decoration: none;
+		}
+	}
+}
+.content{
+	padding: 100px 0;
+}
+
+.intro{
+	text-align: center;
+	h1{
+		font-family: $dreamFont;
+		font-size: em(28px,$font-size);
+		font-weight: normal;
+		letter-spacing: 0.3em;
+		text-transform: uppercase;
+		margin-bottom: 20px;
+	}
+	p{
+		width: 95%;
+		max-width: 900px;
+		font-family: $dreamFont;
+		font-size: em(20px,$font-size);
+		font-weight: normal;
+		color: $fontColor;//lighten($fontColor,20);
+		line-height: 1.8em;
+		margin: 0 auto;
+	}
+}
+.vendors{
+
+}
+.vendor__top{
+	position: relative;
+	height: 337px;
+	width: 100%;
+	background:{
+		image: url(../img/vendor-bg.jpg);
+		size: cover;
+		position: center center;
+	}
+}
+.vendor__list{
+	padding-bottom: 40px;
+	li{
+		list-style: none;
+		font-family: $dreamFont;
+		font-size: em(16px,$font-size);
+		font-weight: normal;
+		margin-bottom: 5px;
+		a{
+			color: $fontColor;//lighten($fontColor,20);
+			text-decoration: none;
+		}
+	}
+}
+
+h2[class*="sub__header"]{
+	width: 95%;
+	text-align: center;
+	font-size: em(16px,$font-size);
+	padding: 25px 0;
+	margin-left: auto;
+	margin-right: auto;
+	span,
+	b{
+		display: block;
+		font-family: $dreamFont;
+		font-weight: normal;
+		color: $fontColor;
+	}
+	span{
+		font-style: italic;
+		font-size: em(22px,$font-size);
+		font-weight: 300;
+		letter-spacing: 0.05em;
+	}
+	b{
+		font-family: $dreamFont;
+		font-size: em(28px,$font-size);
+		font-weight: normal;
+		text-transform: uppercase;
+		letter-spacing: 0.25em;
+	}
+}
+h2[class*="sub__header--dark"]{
+	position: absolute;
+	bottom: -50px;
+	left: 50%;
+	width: 95%;
+	max-width: 538px;
+	margin-left: -269px;
+	background-color: $fontColor;
+	padding: 25px 0;
+	span,
+	b{
+
+		color: #fff;
+	}
+	b{
+		
+		font-family: $sansFont;
+		font-size: em(22px,$font-size);
+		font-size: em(22px,$font-size);
+	}
+	span{
+		font-family: $dreamFont;
+
+	}
+}
+.episodes{
+	min-height: 640px;
+	background-image: linear-gradient(
+      $secondaryColor,
+      $secondaryColor 75%,
+      #fff 75%,
+      #fff 100%
+    );;
+	text-align: center;
+	iframe{
+		margin: 0 auto;
+	}
+}
+.magazine{
+	height: 800px;
+	position: relative;
+	text-align: center;
+	overflow: hidden;
+	img{
+		position: absolute;
+		top: 120px;
+		left: 50%;
+		margin-left: -760.5px;
+	}
+}
+
 
 
 /*!////////////////////////////////////////////////
