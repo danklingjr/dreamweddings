@@ -355,13 +355,15 @@ header[role=banner] {
   max-width: 100%; }
 
 nav[role=navigation] {
+  width: 100%;
+  height: 52px;
   background-color: rgba(255, 255, 255, 0.9);
-  position: relative;
   bottom: 0;
   margin-top: -52px;
   padding: 15px 0;
   text-align: center;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  z-index: 2; }
   nav[role=navigation] span {
     padding: 0 35px; }
     nav[role=navigation] span a {
@@ -430,7 +432,7 @@ h2[class*="sub__header"] {
     font-style: italic;
     font-size: 1.375em;
     font-weight: 300;
-    letter-spacing: 0.05em; }
+    letter-spacing: 0.15em; }
   h2[class*="sub__header"] b {
     font-family: "minion-pro";
     font-size: 1.75em;
@@ -461,8 +463,10 @@ h2[class*="sub__header--dark"] {
   min-height: 640px;
   background-image: linear-gradient(#e7f9fc, #e7f9fc 75%, white 75%, white 100%);
   text-align: center; }
-  .episodes iframe {
-    margin: 0 auto; }
+  .episodes .video {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1000px; }
 
 .magazine {
   height: 800px;
