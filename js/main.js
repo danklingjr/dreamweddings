@@ -16,3 +16,4 @@ var stickyPanelOptions = {
 $("#nav").stickyPanel(stickyPanelOptions);
 
 $(".content").fitVids();
+

@@ -11,34 +11,86 @@ body{
 	height: 100%;
 }
 header[role=banner]{
-	height: 100%;
+	height: 90%;
 	position: relative;
 }
+hr{
+	position: relative;
+}
+hr:after{
+	content: "";
+	position: absolute;
+	top: -9px;
+	left: 50%;
+	background-image: url(../img/break.png);
+	width: 26px;
+	height: 18px;
+	margin-left: -9px;
+}
+.page__header{
+	height: auto !important;
+}
 .masthead{
+	position: fixed;
+	top: 0;
 	height: 100%;
 	width: 100%;
 	background:{
-		image: url(../img/cover1.jpg);
+		image: url(../img/cover-summer-14.jpg);
+		size: cover;
+		position: top center;
+	}
+	text-align: center;
+	// margin-bottom: -52px;
+	.logo{
+		max-width: 100%;
+	}
+}
+.masthead:after{
+	content: "";
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background:{
+		image: url(../img/cover-summer-14-o.png);
+		size: cover;
+		position: top center;
+	}
+	z-index: 1;
+}
+.masthead__page{
+	position: fixed;
+	top: 0;
+	width: 100%;
+	height: 356px;
+	background:{
+		image: url(../img/magazine-bg.jpg);
 		size: cover;
 		position: center center;
 	}
-	text-align: center;
+	z-index: 0;
+	.logo{
+		width: 100%;
+		max-width: 560px;
+		margin-top: 120px;
+	}
 }
-.logo{
-	max-width: 100%;
-}
+
 nav[role=navigation]{
+	position: relative;
 	width: 100%;
 	height: 52px;
 	background:{
 		color: rgba(255,255,255,0.9);
 	}
-	bottom: 0;
-	margin-top: -52px;
+	top: 100%;
+	// margin-top: -52px;
 	padding: 15px 0;
 	text-align: center;
 	text-transform: uppercase;
-	z-index: 2;
+	z-index: 3;
 	span{
 		padding: 0 35px;
 		a{
@@ -47,15 +99,30 @@ nav[role=navigation]{
 			font-weight: 300;
 			color: $fontColor;
 			text-decoration: none;
+			&:hover{
+				text-decoration: underline;
+			}
 		}
 	}
 }
+.page__nav{
+	position: fixed !important;
+	top: 0 !important;
+}
 .content{
 	padding: 100px 0;
+	position: relative;
+	background-color: #fff;
 }
-
+.page .content{
+	padding: 40px 0 !important;
+}
+.page .content.vendors__main{
+	padding: 100px 0 40px !important;
+}
 .intro{
 	text-align: center;
+	margin-top: 52px;
 	h1{
 		font-family: $dreamFont;
 		font-size: em(28px,$font-size);
@@ -75,8 +142,32 @@ nav[role=navigation]{
 		margin: 0 auto;
 	}
 }
-.vendors{
-
+.page__header{
+	text-align: center;
+	margin-top: 356px;
+	h1{
+		font-family: $dreamFont;
+		font-size: em(28px,$font-size);
+		font-weight: normal;
+		letter-spacing: 0.3em;
+		text-transform: uppercase;
+		margin-bottom: 20px;
+	}
+	p{
+		width: 95%;
+		max-width: 900px;
+		font-family: $dreamFont;
+		font-size: em(20px,$font-size);
+		font-weight: normal;
+		color: $fontColor;//lighten($fontColor,20);
+		line-height: 1.8em;
+		margin: 0 auto;
+	}
+}
+.vendors,
+.stores{
+	background-color: #fff;
+	position: relative;
 }
 .vendor__top{
 	position: relative;
@@ -87,8 +178,10 @@ nav[role=navigation]{
 		size: cover;
 		position: center center;
 	}
+	z-index: 2;
 }
-.vendor__list{
+.vendor__list,
+.store__list{
 	padding-bottom: 40px;
 	li{
 		list-style: none;
@@ -99,6 +192,11 @@ nav[role=navigation]{
 		a{
 			color: $fontColor;//lighten($fontColor,20);
 			text-decoration: none;
+		}
+		a:hover,
+		a:focus{
+			background-color: #fffee0;
+			text-decoration: underline;
 		}
 	}
 }
@@ -176,20 +274,441 @@ h2[class*="sub__header--dark"]{
 	position: relative;
 	text-align: center;
 	overflow: hidden;
+	background-color: #fff;
 	img{
 		position: absolute;
 		top: 120px;
 		left: 50%;
-		margin-left: -760.5px;
+		margin-left: -786.5px;
+	}
+}
+.magazine__actions{
+	position: relative;
+	top: 620px;
+	margin: 0 auto;
+	text-align: center;
+	a{
+		margin: 0 2px;
+		font-family: $dreamFont;
+		font-size: em(18px,$font-size);
+		font-style: italic;
+		color: #fff;
+		text-decoration: none;
+		background-color: $color3;
+		padding: 5px 10px;
+		@include prefix(border-radius, 3px);
+		@include prefix(transition,0.3s ease-in-out);
+	}
+	a:hover,
+	a:focus{
+		background-color: lighten($color3,5);
+	}
+}
+.blog-wrap{
+	width: 100%;
+	max-width: 1080px;
+	margin: 0 auto;
+}
+article[class*="blog__article"]{
+	position: relative;
+	background: $color3;
+	background-size: cover; 
+	background-position: center center;
+	float: left;
+	figure{
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		opacity: 0.75;
+		@include prefix(transition, 0.3s ease-in-out);
+
+	}
+	h2{
+		max-width: 400px;
+		position: absolute;
+		bottom: 60px;
+		left: 20px;
+		font-family: $sansFont;
+		font-size: em(26px,$font-size);
+		font-weight: 300;
+		color: #fff;
+		text-transform: uppercase;
+		letter-spacing: 0.06em;
+		line-height: 1.3em;
+		z-index: 2;
+		@include prefix(transition, 0.3s ease-in-out);
+	}
+	&:hover{
+		figure{
+			opacity: 1.0;
+		}
+		h2{
+			opacity: 0;
+		}
+	}
+}
+.blog__article--large{
+	width: 100%;
+	height: 500px;
+	margin-top: 0.462989%;
+	@media screen and (min-width: 800px){
+		height: 752px;
+	}
+}
+.blog__article--medium{
+	width: 100%;
+	height: 658px;
+	margin-top: 0.462989%;
+	@media screen and (min-width: 800px){
+		width: 58.4259%;
+	}
+}
+.blog__article--normal{
+	width: 41.111111%;
+	height: 444px;
+	margin-left: 0.462989%;
+	margin-top: 0.462989%;
+}
+.blog__article--small{ 
+	width: 41.111111%;
+	height: 209px;
+	margin-left: 0.462989%;
+	margin-top: 0.462989%;
+}
+.blog__article--standard{
+	width: 32.87%;
+	height: 309px;
+	@include gridRow(2, 0.462989%);
+}
+.more__link{
+	display: block;
+	margin-top: 20px;
+	font-family: $dreamFont;
+	font-size: em(22px,$font-size);
+	font-style: italic;
+	color: $fontColor;
+	letter-spacing: 0.05em;
+	text-align: center;
+	text-decoration: none;
+}
+.more{
+    margin: 0 auto 60px;
+    text-align: center ;
+    span{
+      position: relative;
+      background-color: #ccc;
+      width: 10px;
+      height: 10px;
+      border-radius: 5px;
+      display: inline-block;
+      -webkit-transition: 0.2s ease-in-out;
+      -moz-transition: 0.2s ease-in-out;
+      -o-transition: 0.2s ease-in-out;
+      transition: 0.2s ease-in-out;
+    }
+    a{
+    	text-decoration: none;
+    }
+    a:hover,
+    a:focus{
+      span{
+        background-color: #3b3a39;
+      }
+    }
+}
+
+/* Magazines page
+//////////////////////////////////////////////////////*/
+.magazines{
+	iframe{
+		display: block;
+		margin: 0 auto;
+	}
+}
+.grid-25.issue{
+	@include gridRow(2, 1.515151515152%);
+	@media screen and (min-width: 800px){
+		@include gridRow(4, 1.515151515152%);
+	}
+}
+.issue{
+	@include prefix(transition, 0.2s ease-in-out);
+	@include prefix(backface-visibility, hidden);
+	figure{
+		
+		@include prefix(backface-visibility, hidden);
+	}
+	img{
+		width: 100%;
+		border: 1px solid rgba(0,0,0,0.15);
+		box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+		@include prefix(backface-visibility, hidden);
+	}
+	&:hover{
+		@include prefix(transform, scale(1.05));
+		@include prefix(backface-visibility, hidden);
+	}
+}
+.store__top{
+	position: relative;
+	h2[class*="sub__header--dark"]{
+		position: relative;
+		top: 0;
+		left: 0;
+		margin-left: auto;
+	}
+}
+.behind-the-scenes{
+	position: relative;
+	height: 337px;
+	width: 100%;
+	background:{
+		image: url(../img/behind-the-scenes.jpg);
+		size: cover;
+		position: center center;
+	}
+	z-index: 2;
+}
+
+
+/* Episodes page
+//////////////////////////////////////////////////////*/
+.latest-episode,
+.blog-post{
+	background-color: #252525;
+	z-index: 1;
+	text-align: center;
+	h2[class*="sub__header"] b,
+	h2[class*="sub__header"] span{
+		color: #fff;
+	}
+	hr{
+		border-top: none;
+		border-bottom: 1px solid transparentize(#fff,0.9);
+		background-color: transparentize(#000,0.7);
+		margin: 40px 0 20px;
+	}
+	hr:after{
+		content: "";
+		display: none;
+	}
+}
+.episode,
+.vendor__main--vendor{
+	a{
+		text-decoration: none;
+		color: $fontColor;
+		&:hover,
+		&:focus{
+			text-decoration: underline;
+			h2 span{
+				background-color: #fffee0;
+			}
+			time{
+				background-color: #fffee0;
+			}
+		}
+	}
+	margin-bottom: 50px !important;
+	figure{
+		margin-bottom: 15px;
+	}
+	img{
+		width: 100%;
+	}
+	h2{
+		font-family: $sansFont;
+		font-size: em(18px,$font-size);
+		font-weight: 300;
+		color: $fontColor;
+		text-transform: uppercase;
+		letter-spacing: 0.06em;
+		line-height: 1.3em;
+	}
+	time{
+		font-family: $dreamFont;
+		font-size: em(18px,$font-size);
+		font-style: italic;
+		line-height: 1.0em;
+		color: $fontColor;
 	}
 }
 
+/* Blog page
+//////////////////////////////////////////////////////*/
+
+.blog-post{
+	position: relative; 
+	padding-left: 2.5% !important;
+	padding-right: 2.5% !important;
+	img{
+		display: block;
+		width: 100%;
+		margin-bottom: 20px;
+	}
+	span{
+		display: inline-block;
+		width: 100%;
+		@media screen and (min-width: 600px){
+			width: 33.333333%;
+		}
+		@media screen and (min-width: 1280px){
+			width: 25%;
+		}
+	}
+}
+.single-column{
+	width: 100%;
+	max-width: 600px;
+	margin: 0 auto;
+}
+.vendor-contact{
+	display: block;
+	width: 400px;
+	background-color: #fff;
+	position: absolute;
+	bottom: 70px;
+	left: 50%;
+	font-family: $dreamFont;
+	font-size: em(28px, $font-size);
+	font-weight: normal;
+	font-style: italic;
+	color: $fontColor;
+	text-align: center;
+	text-decoration: none;
+	padding: 10px;
+	margin-left: -200px;
+	@include prefix(border-radius, 3px);
+	@include prefix(transition, 0.2s ease-in-out);
+	&:hover{
+		background-color: lighten($fontColor,10);
+		color: #fff;
+	}
+}
+.item.details{
+	background-color: #fff;
+	width: 50%;
+
+}
+.alt.blog-post{
+	padding-left: 0 !important;
+	padding-right: 0 !important;
+	padding: 0 0 200px;
+	img{
+		margin-bottom: 0;
+	}
+}
+.alt2.blog-post{
+	padding: 0 0 200px;
+}
+
+/* Submit your wedding
+//////////////////////////////////////////////////////*/
+.submit-wedding{
+	form{
+		width: 100%;
+		max-width: 650px;
+		margin: 0 auto;
+		label,
+		input:not(.check),
+		select,
+		textarea{
+			width: 100%;
+			display: block;
+			font-family: $dreamFont;
+		}
+		label{
+			font-size: em(18px, $font-size);
+			margin-top: 20px;
+			margin-bottom: 10px;
+		}
+		input,
+		select,
+		textarea{
+			border: 1px solid #ccc;
+			padding: 15px;
+			margin-bottom: 10px;
+		}
+		textarea{
+			height: 200px;
+		}
+		button{
+			margin: 20px 2px 0;
+			font-family: $dreamFont;
+			font-size: em(26px,$font-size);
+			font-style: italic;
+			color: #fff;
+			text-decoration: none;
+			border: none;
+			background-color: $color3;
+			padding: 10px 60px;
+			@include prefix(border-radius, 3px);
+			@include prefix(transition,0.3s ease-in-out);
+		}
+	}
+}
+.check{
+	font-family: $dreamFont;
+}
+.required:after{
+	content: "*";
+	color: red;
+
+}
+
+/* Vendors page
+//////////////////////////////////////////////////////*/
+.vendors__main{
+
+}
+
+
+/* Footer
+//////////////////////////////////////////////////////*/
+footer[role=contentinfo]{
+	background-color: #fff;
+	position: relative;
+	z-index: 2;
+	text-align: center;
+	nav{
+		border-bottom: 3px solid #f4f4f4;
+		padding: 20px 0;
+		margin-bottom: 20px;
+	}
+	nav a{
+		font-family: $dreamFont;
+		font-size: em(18px,$font-size);
+		font-weight: 300;
+		color: $fontColor;
+		text-decoration: none;
+		text-align: center;
+		text-transform: uppercase;
+		margin: 0 40px;
+		&:hover{
+			text-decoration: underline;
+		}
+	}
+}
+.copyright{
+	font-family: $dreamFont;
+	font-size: em(16px,$font-size);
+	font-weight: 300;
+	color: $fontColor;
+	text-decoration: none;
+	text-align: center;
+	text-transform: uppercase;
+	padding-bottom: 20px;
+}
 
 
 /*!////////////////////////////////////////////////
 // STATES
 /////////////////////////////////////////////////*/
-
+.content.blog{
+	padding: 100px 0 0;
+}
 
 
 @import "shame.scss";
