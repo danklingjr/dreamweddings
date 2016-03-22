@@ -17,3 +17,7 @@ $("#nav").stickyPanel(stickyPanelOptions);
 
 $(".content").fitVids();
 
+$(".close-popup").on( "click", function() {
+    $(".popup-overlay").fadeOut(200);
+    return false;
+});
