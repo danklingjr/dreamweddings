@@ -303,7 +303,7 @@ textarea {
       margin-right: 0; }
 
   .grid-5.no-margin {
-    width: 83.0%; }
+    width: 83%; }
     .grid-5.no-margin:nth-child(n) {
       margin-bottom: 0;
       margin-right: 0; }
@@ -365,6 +365,12 @@ textarea {
 /*!////////////////////////////////////////////////
 // THEME
 /////////////////////////////////////////////////*/
+@font-face {
+  font-family: 'centennial';
+  src: url("fonts/centennial.eot");
+  /* IE9 Compat Modes */
+  src: url("fonts/centennial.eot?#iefix") format("embedded-opentype"), url("fonts/centennial.woff2") format("woff2"), url("fonts/centennial.woff") format("woff"), url("fonts/centennial.ttf") format("truetype"), url("fonts/centennial.svg#centennial") format("svg");
+  /* Legacy iOS */ }
 /*!////////////////////////////////////////////////
 // MODULES
 /////////////////////////////////////////////////*/
@@ -381,7 +387,7 @@ body {
 .menu-button {
   display: block;
   padding: 10px;
-  font-family: "minion-pro";
+  font-family: "centennial", serif;
   font-size: 1.625em;
   font-weight: 300;
   color: #231f20;
@@ -395,7 +401,7 @@ body {
     border-bottom: 1px solid rgba(0, 0, 0, 0.1); }
   .mobile__menu a {
     display: block;
-    font-family: "minion-pro";
+    font-family: "centennial", serif;
     font-size: 1.625em;
     font-weight: 300;
     color: #231f20;
@@ -522,7 +528,7 @@ nav[role=navigation] {
   nav[role=navigation] span {
     padding: 0 5px; }
     nav[role=navigation] span a {
-      font-family: "minion-pro";
+      font-family: "centennial", serif;
       font-size: 1em;
       font-weight: 300;
       color: #231f20;
@@ -561,7 +567,7 @@ nav[role=navigation] {
 .intro {
   text-align: center; }
   .intro h1 {
-    font-family: "minion-pro";
+    font-family: "centennial", serif;
     font-size: 1.75em;
     font-weight: normal;
     letter-spacing: 0.3em;
@@ -570,7 +576,7 @@ nav[role=navigation] {
   .intro p {
     width: 95%;
     max-width: 900px;
-    font-family: "minion-pro";
+    font-family: "centennial", serif;
     font-size: 1.25em;
     font-weight: normal;
     color: #231f20;
@@ -583,7 +589,7 @@ nav[role=navigation] {
   margin-top: 0; }
   .page__header h1,
   .vendor__header h1 {
-    font-family: "minion-pro";
+    font-family: "centennial", serif;
     font-size: 1.75em;
     font-weight: normal;
     letter-spacing: 0.3em;
@@ -593,7 +599,7 @@ nav[role=navigation] {
   .vendor__header h3 {
     width: 95%;
     max-width: 900px;
-    font-family: "minion-pro";
+    font-family: "centennial", serif;
     font-size: 1.375em;
     font-weight: bold;
     margin: 0 auto 20px;
@@ -604,7 +610,7 @@ nav[role=navigation] {
   .vendor__header li {
     width: 95%;
     max-width: 900px;
-    font-family: "minion-pro";
+    font-family: "centennial", serif;
     font-size: 1.25em;
     font-weight: normal;
     color: #231f20;
@@ -632,7 +638,7 @@ nav[role=navigation] {
   .vendor__list li,
   .store__list li {
     list-style: none;
-    font-family: "minion-pro";
+    font-family: "centennial", serif;
     font-size: 1em;
     font-weight: normal;
     margin-bottom: 5px; }
@@ -660,7 +666,7 @@ h2[class*="sub__header"] {
   h2[class*="sub__header"] span,
   h2[class*="sub__header"] b {
     display: block;
-    font-family: "minion-pro";
+    font-family: "centennial", serif;
     font-weight: normal;
     color: #231f20; }
   h2[class*="sub__header"] span {
@@ -669,7 +675,7 @@ h2[class*="sub__header"] {
     font-weight: 300;
     letter-spacing: 0.15em; }
   h2[class*="sub__header"] b {
-    font-family: "minion-pro";
+    font-family: "centennial", serif;
     font-size: 1.75em;
     font-weight: normal;
     text-transform: uppercase;
@@ -687,10 +693,10 @@ h2[class*="sub__header--light"] {
     font-size: 1em; }
   h2[class*="sub__header--dark"] b,
   h2[class*="sub__header--light"] b {
-    font-family: "proxima-nova", sans-serif; }
+    font-family: "Verlag A", "Verlag B", sans-serif; }
   h2[class*="sub__header--dark"] span,
   h2[class*="sub__header--light"] span {
-    font-family: "minion-pro"; }
+    font-family: 'centennial'; }
   @media screen and (min-width: 600px) {
     h2[class*="sub__header--dark"] span,
     h2[class*="sub__header--dark"] b,
@@ -759,7 +765,7 @@ h2[class*="sub__header--dark"] {
   text-align: center; }
   .magazine__actions a {
     margin: 0 2px;
-    font-family: "minion-pro";
+    font-family: "centennial", serif;
     font-size: 1.125em;
     font-style: italic;
     color: #fff;
@@ -805,7 +811,7 @@ article[class*="blog__article"] {
     position: absolute;
     bottom: 60px;
     left: 20px;
-    font-family: "proxima-nova", sans-serif;
+    font-family: "Verlag A", "Verlag B", sans-serif;
     font-size: 1.625em;
     font-weight: 300;
     color: #fff;
@@ -879,7 +885,7 @@ article[class*="blog__article"] {
 .more__link {
   display: block;
   margin-top: 20px;
-  font-family: "minion-pro";
+  font-family: "centennial", serif;
   font-size: 1.375em;
   font-style: italic;
   color: #231f20;
@@ -1036,7 +1042,7 @@ article[class*="blog__article"] {
     width: 100%; }
   .episode h2,
   .vendor__main--vendor h2 {
-    font-family: "proxima-nova", sans-serif;
+    font-family: "Verlag A", "Verlag B", sans-serif;
     font-size: 1.125em;
     font-weight: 300;
     color: #231f20;
@@ -1045,7 +1051,7 @@ article[class*="blog__article"] {
     line-height: 1.3em; }
   .episode time,
   .vendor__main--vendor time {
-    font-family: "minion-pro";
+    font-family: "centennial", serif;
     font-size: 1.125em;
     font-style: italic;
     line-height: 1.0em;
@@ -1294,7 +1300,7 @@ article[class*="blog__article"] {
   max-width: 900px; }
   .special-feature a {
     margin: 0 auto;
-    font-family: "minion-pro";
+    font-family: "centennial", serif;
     font-size: 1.125em;
     font-style: italic;
     color: #fff;
@@ -1323,14 +1329,14 @@ article[class*="blog__article"] {
   max-width: 800px;
   padding: 20px; }
   .photo-credit p {
-    font-family: "minion-pro";
+    font-family: "centennial", serif;
     font-size: 1.125em;
     color: #2a2a2a;
     margin-bottom: 10px; }
   .photo-credit a {
     display: block;
     margin: 0 auto;
-    font-family: "minion-pro";
+    font-family: "centennial", serif;
     font-size: 1.125em;
     font-style: italic;
     color: #fff;
@@ -1363,7 +1369,7 @@ article[class*="blog__article"] {
   position: absolute;
   bottom: 70px;
   left: 50%;
-  font-family: "minion-pro";
+  font-family: "centennial", serif;
   font-size: 1.75em;
   font-weight: normal;
   font-style: italic;
@@ -1402,7 +1408,7 @@ article[class*="blog__article"] {
   text-align: center;
   padding: 20px 0 10px; }
   .pagination a {
-    font-family: "minion-pro";
+    font-family: "centennial", serif;
     font-size: 1.75em;
     font-weight: normal;
     font-style: italic;
@@ -1422,7 +1428,7 @@ article[class*="blog__article"] {
   .submit-wedding form li {
     width: 100% !important;
     display: block;
-    font-family: "minion-pro"; }
+    font-family: "centennial", serif; }
   .submit-wedding form input[type=checkbox] {
     max-width: 25px;
     display: inline-block; }
@@ -1450,7 +1456,7 @@ article[class*="blog__article"] {
   .submit-wedding form input[type=submit] {
     max-width: 260px;
     margin: 20px 2px 0;
-    font-family: "minion-pro";
+    font-family: "centennial", serif;
     font-size: 1.625em;
     font-style: italic;
     color: #fff;
@@ -1471,7 +1477,7 @@ article[class*="blog__article"] {
   border: 1px solid red !important; }
 
 .check {
-  font-family: "minion-pro"; }
+  font-family: "centennial", serif; }
 
 .required_item {
   color: red; }
@@ -1557,7 +1563,7 @@ article[class*="blog__article"] {
     margin-right: 0; }
 
 .team__member h2 {
-  font-family: "proxima-nova", sans-serif;
+  font-family: "Verlag A", "Verlag B", sans-serif;
   font-size: 1.125em;
   font-weight: 300;
   color: #231f20;
@@ -1566,7 +1572,7 @@ article[class*="blog__article"] {
   line-height: 1.3em;
   margin-top: 10px; }
 .team__member i {
-  font-family: "minion-pro";
+  font-family: "centennial", serif;
   font-size: 1.125em;
   font-style: italic;
   line-height: 1.0em;
@@ -1602,7 +1608,7 @@ footer[role=contentinfo] {
       footer[role=contentinfo] nav {
         display: block; } }
   footer[role=contentinfo] nav a {
-    font-family: "minion-pro";
+    font-family: "centennial", serif;
     font-size: 1.125em;
     font-weight: 300;
     color: #231f20;
@@ -1614,7 +1620,7 @@ footer[role=contentinfo] {
       text-decoration: underline; }
 
 .copyright {
-  font-family: "minion-pro";
+  font-family: "centennial", serif;
   font-size: 1em;
   font-weight: 300;
   color: #231f20;
@@ -1694,13 +1700,13 @@ footer[role=contentinfo] {
     margin-bottom: 10px;
     border: none;
     box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.4);
-    font-family: "minion-pro";
+    font-family: "centennial", serif;
     font-size: 1.25em;
     font-style: italic;
     text-decoration: none; }
   .popup-form p {
     margin: 20px 0 40px;
-    font-family: "minion-pro";
+    font-family: "centennial", serif;
     font-size: 1.125em;
     font-style: italic; }
   .popup-form input[type=submit], .popup-form a {
@@ -1733,6 +1739,36 @@ footer[role=contentinfo] {
   @media screen and (min-width: 600px) {
     .content.blog {
       padding: 100px 0 0; } }
+
+.blog--new {
+  width: calc(33.333333% - 10px);
+  margin: 0 5px;
+  float: left;
+  background-color: #ccc; }
+
+.vendor__highlight {
+  width: 100%;
+  background-color: #ccc;
+  padding: 10px;
+  margin-top: 10px; }
+
+.blog--center {
+  width: 1220px;
+  margin: 0 auto; }
+
+.blog__wrap {
+  float: left; }
+
+.ads {
+  width: 300px;
+  float: left;
+  margin-left: 20px; }
+
+.ad {
+  background-color: #ccc;
+  width: 300px;
+  height: 240px;
+  margin-bottom: 10px; }
 
 /*! ==========================================================================
 // Media Queries

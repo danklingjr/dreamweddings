@@ -1,0 +1,48 @@
+.new__blogs {
+
+}
+.blog {
+  &--new {
+    width: calc(33.333333% - 10px);
+    margin: 0 5px;
+    float: left;
+    background-color: #ccc;
+  }
+  &__one {
+
+  }
+  &__two {
+
+  }
+  &__three {
+
+  }
+}
+
+.vendor__highlight {
+  width: 100%;
+  background-color: #ccc;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+.blog--center {
+  width: 1220px;
+  margin: 0 auto;
+}
+
+.blog__wrap {
+  float: left;
+}
+
+.ads {
+  width: 300px;
+  float: left;
+  margin-left: 20px;
+}
+.ad {
+  background-color: #ccc;
+  width: 300px;
+  height: 240px;
+  margin-bottom: 10px;
+}

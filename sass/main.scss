@@ -184,7 +184,7 @@ nav[role=navigation]{
 	}
 	span{
 		padding: 0 5px;
-		
+
 		a{
 			font-family: $dreamFont;
 			font-size: em(16px,$font-size);
@@ -372,7 +372,8 @@ h2[class*="sub__header--light"]{
 		font-family: $sansFont;
 	}
 	span{
-		font-family: $dreamFont;
+		// font-family: $dreamFont;
+		font-family: 'centennial';
 
 	}
 	@media screen and (min-width: 600px){
@@ -469,7 +470,7 @@ h2[class*="sub__header--dark"]{
 article[class*="blog__article"]{
 	position: relative;
 	background: $color3;
-	background-size: cover; 
+	background-size: cover;
 	background-position: center center;
 	float: left;
 	figure{
@@ -537,7 +538,7 @@ article[class*="blog__article"]{
 		margin-top: 0.462989%;
 	}
 }
-.blog__article--small{ 
+.blog__article--small{
 	width: 100%;
 	height: 209px;
 	margin-left: 0;
@@ -613,7 +614,7 @@ article[class*="blog__article"]{
 	@include prefix(transition, 0.2s ease-in-out);
 	@include prefix(backface-visibility, hidden);
 	figure{
-		
+
 		@include prefix(backface-visibility, hidden);
 	}
 	img{
@@ -713,7 +714,7 @@ article[class*="blog__article"]{
 }
 @media screen and (max-width: 640px){
 	.vendor__main--vendor h2{
-		
+
 	}
 }
 .blog-post{
@@ -724,7 +725,7 @@ article[class*="blog__article"]{
 //////////////////////////////////////////////////////*/
 
 .blog-post{
-	position: relative; 
+	position: relative;
 	padding-left: 2.5% !important;
 	padding-right: 2.5% !important;
 	img{
@@ -737,7 +738,7 @@ article[class*="blog__article"]{
 		width: 100%;
 		@media screen and (min-width: 600px){
 			width: 33.333333%;
-		} 
+		}
 		@media screen and (min-width: 1280px){
 			width: 25%;
 		}
@@ -756,11 +757,11 @@ article[class*="blog__article"]{
 }
 .blog-image:hover,
 .blog-image:focus a{
-	
+
 }
 .single-column{
 	width: 100%;
-	max-width: 600px; 
+	max-width: 600px;
 	margin: 0 auto;
 }
 
@@ -1117,7 +1118,7 @@ article[class*="blog__article"]{
 	background-color: #fff;
 }
 .vendor__header{
-	text-align: left; 
+	text-align: left;
 }
 .vendor__details{
 	width: 100%;
@@ -1197,7 +1198,7 @@ article[class*="blog__article"]{
 	img{
 		width: 100%;
 	}
-	
+
 }
 .grid-inline-1{
 	@include gridRow(6, 1.515151515152%);
@@ -1252,7 +1253,7 @@ footer[role=contentinfo]{
 		margin-bottom: 20px;
 		@media screen and (min-width: 600px){
 			display: block;
-		}	
+		}
 	}
 	nav a{
 		font-family: $dreamFont;
@@ -1400,6 +1401,8 @@ footer[role=contentinfo]{
 		padding: 100px 0 0;
 	}
 }
+
+@import "blogs.scss";
 
 
 @import "shame.scss";

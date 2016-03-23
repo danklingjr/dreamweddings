@@ -6,8 +6,18 @@ $font-size: 16px;
 	@return ($px / $base) * 1em;
 }
 
-$dreamFont: "minion-pro";
-$sansFont: "proxima-nova",sans-serif;
+@font-face {
+  font-family: 'centennial';
+  src: url('fonts/centennial.eot'); /* IE9 Compat Modes */
+  src: url('fonts/centennial.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('fonts/centennial.woff2') format('woff2'), /* Super Modern Browsers */
+       url('fonts/centennial.woff') format('woff'), /* Pretty Modern Browsers */
+       url('fonts/centennial.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('fonts/centennial.svg#centennial') format('svg'); /* Legacy iOS */
+}
+
+$dreamFont: "centennial",serif;//minion-pro
+$sansFont: "Verlag A", "Verlag B", sans-serif;//proxima-nova
 
 $fontColor: #231f20;
 $secondaryColor: #e7f9fc;
